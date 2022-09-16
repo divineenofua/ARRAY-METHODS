@@ -90,10 +90,10 @@ h3{
         width: 100%; 
     }
     aside{
-        flex:  1 0 60%;
+        flex:  1 0 50%;
     }
     main{
-        flex: 1 0 40%;
+        flex: 1 0 50%;
     }
     main h2{
         font-size: 14px;
@@ -103,7 +103,10 @@ h3{
         width: 100%;
     }
     h3{
-        font-size: 12px;
+        font-size: 13px;
+    }
+    .person{
+        font-size: 13px;
     }
     h1{
         font-size: 17px;
