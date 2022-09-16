@@ -9,7 +9,7 @@ const calculateWealthBtn = document.getElementById("calculate-wealth");
 let data = [];
 
 
-getRandomUser();
+
 
 //fetch random user and add money
 async function getRandomUser() {
@@ -21,7 +21,7 @@ async function getRandomUser() {
 
   const newUser = {
     name: `${user.name.first} ${user.name.last}`,
-    money: Math.floor(math.random() * 1000000)
+    money: Math.floor(Math.random() * 1000000)
   }
   addData(newUser);
 }
@@ -41,7 +41,7 @@ function sortByRichest() {
 
 // filter only millionaires
 function showMillionaire() {
-  data = data.filter(item =>  user.money > 1000000);
+  data = data.filter(user =>  user.money > 1000000);
   updateDOM();
 }
 
@@ -62,7 +62,7 @@ function addData(obj) {
 //update DOM
 function  updateDOM(providedData = data) {
   //clear div
-  main.innerHTML = '<h2><strong>Person</strong>wealth</h2>';
+  main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
 
   providedData.forEach(item => {
     const element = document.createElement('div');
@@ -84,4 +84,4 @@ addUserBtn.addEventListener('click', getRandomUser);
 doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByRichest);
 showMillionaireBtn.addEventListener('click', showMillionaire);
-calculateWealthBtn.addEventListener('click', calculateWealth)
+calculateWealthBtn.addEventListener('click', calculateWealth);
