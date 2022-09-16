@@ -1,5 +1,9 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
 }
 body{
     background: #f4f4f4;
@@ -8,7 +12,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    margin: 0;
+    justify-content: center;
+    /* margin: 0 auto; */
 }
 .container{
     display: flex;
@@ -22,13 +27,18 @@ aside{
     width: 250px;
     border-right: 1px solid #1111;
 }
+h1{
+    text-align: center;
+
+}
  aside button{
     background: #fff;
     border: solid 1px #111;
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 90%;
+    max-width: 100%;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px ;
@@ -39,6 +49,8 @@ main{
     padding: 10px 20px;
     
 }
+
+
 
 h2{
     border-bottom: 1px solid #111;
@@ -65,4 +77,35 @@ h3{
     justify-content: space-between;
     font-size:20px ;
     margin-bottom: 10px;
+}
+
+
+@media (max-width:530px){
+    body{
+        width: 90%;
+    }
+    .container{
+        width: 100%; 
+    }
+    aside{
+        flex:  1 0 60%;
+    }
+    main{
+        flex: 1 0 40%;
+    }
+    main h2{
+        font-size: 15px;
+    }
+    aside button{
+        font-size: 10px;
+        width: 100%;
+    }
+    h3{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 17px;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
